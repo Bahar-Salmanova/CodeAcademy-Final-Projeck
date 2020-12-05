@@ -1,0 +1,48 @@
+﻿@model CodeClinic.Models.Diseas
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Dəyişdir</h1>
+
+<h4>Xəstəliklər</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <input asp-for="Photo" type="hidden" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="About" class="control-label"></label>
+                <input asp-for="About" class="form-control" />
+                <span asp-validation-for="About" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShortAbout" class="control-label"></label>
+                <input asp-for="ShortAbout" class="form-control" />
+                <span asp-validation-for="ShortAbout" class="text-danger"></span>
+            </div>
+            <div class="custom-file my-3">
+                <input asp-for="Upload" class="custom-file-input">
+                <label asp-for="Upload" class="custom-file-label">Fayl Seçin</label>
+                <span asp-validation-for="Upload" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Geri</a>
+</div>
+

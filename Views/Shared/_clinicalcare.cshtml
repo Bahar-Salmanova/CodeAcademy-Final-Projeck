@@ -1,0 +1,41 @@
+﻿@model CodeClinic.Models.ResearchClinic
+
+
+<!-- About Section -->
+<section class="about-section">
+    <div class="auto-container">
+        <div class="row">
+            <!-- Content Column -->
+            <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                <div class="inner-column">
+                    <div class="sec-title">
+                        <span class="sub-title">@Model.About</span>
+                        <h2>@Model.Title</h2>
+                        <span class="divider"></span>
+                        <p>@Model.Desc</p>
+                    </div>
+                    <div class="link-box">
+                        <figure class="signature"><img src="~/Uploads//resource/signature.png" alt=""></figure>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- ~/Uploads/ Column -->
+            <div class="~/Uploads/-column col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="video-link">
+                        <a href="@Model.VideoUrl" class="play-btn lightbox-image" data-fancybox="~/Uploads/"><span class="flaticon-play-button-1"></span></a>
+                    </div>
+                    <figure class="image-1"><img src="~/Uploads/resource/@Model.PhotoBig" alt=""></figure>
+                    <figure class="image-2"><img src="~/Uploads/resource/@Model.PhotoNormal" alt=""></figure>
+                    <figure class="image-3">
+                        <span class="hex"></span>
+                        <img src="~/Uploads/resource/@Model.PhotoSmall" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Section -->

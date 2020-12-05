@@ -1,0 +1,115 @@
+﻿@model CodeClinic.ViewModel.DepartmentDetailsViewModel  
+
+
+@*<partial name="_breadcrumbs" model="Model.BreadCrumb" />*@
+<!--Sidebar Page Container-->
+<div class="sidebar-page-container">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!--Content Side / Our Blog-->
+            <div class="content-side col-xl-9 col-lg-8 col-md-12 col-sm-12 order-2">
+                <div class="service-detail">
+                    <div class="images-box">
+                        <figure class="image wow fadeIn"><a href="~/Uploads/resource/@Model.Department.Photo" class="lightbox-image" data-fancybox="services"><img src="~/Uploads/resource/@Model.Department.Photo" alt=""></a></figure>
+                    </div>
+
+                    <div class="content-box">
+                        <div class="title-box">
+                            <h2>@Model.Department.Name</h2>
+                        </div>
+                        <p>@Model.Department.About</p>
+                        <!-- Two Column -->
+                        <div class="two-column">
+                            <div class="row">
+                                <div class="image-column col-xl-6 col-lg-12 col-md-12">
+                                    <figure class="image"><a href="~/Uploads/resource/@Model.Department.Photo" class="lightbox-image"><img src="~/Uploads/resource/@Model.Department.Photo" alt=""></a></figure>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <h3>
+                            Niyə bu xidməti seçməlisiniz?
+                        </h3>
+
+                        <p>Çünki sizin dərdinizə,probleminizə dərman yalnız bizdədir.Bizi seçməkdə siz həm özünüzə, həm bizə xeyir verirsiniz.
+                        Bizim CodeClinic-də ən son texnologiyalarla hazırlanmış aparatlar və dünyaca məşhur həkimlər çalışır.</p>
+
+                        <!--Product Info Tabs-->
+                        
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Sidebar Side-->
+            <div class="sidebar-side col-xl-3 col-lg-4 col-md-12 col-sm-12">
+                <aside class="sidebar services-sidebar">
+
+                    <!-- Category Widget -->
+                    <div class="sidebar-widget categories">
+                        <div class="widget-content">
+                            <!-- Services Category -->
+                            <ul class="services-categories">
+                                <li class="active"><a asp-controller="Departments" asp-action="All">Bütün Şöbələr</a></li>
+                                @foreach (var item in Model.Departments)
+                                {
+                                    <li ><a asp-controller="Departments" asp-action="DepartmentDetails" asp-route-id="@item.Id">@item.Name</a></li>
+
+                                }
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Brochures Box-->
+
+
+                    <div class="help-box">
+                        <span>Tez Əlaqə</span>
+                        
+                        <p>Bizimlə əlaqəyə keçməkdən çəkinməyin və Kontakt bölməsinə daxil olun.</p>
+                        <a asp-controller="Contact" asp-action="Index" class="theme-btn btn-style-one"><span class="btn-title">Kontakt</span></a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Sidebar Page Container -->
+<!-- Services Section -->
+<section class="services-section-two">
+    <div class="auto-container">
+        <div class="carousel-outer">
+            <!-- Services Carousel -->
+            <div class="services-carousel owl-carousel owl-theme default-dots">
+                <!-- service Block -->
+                @foreach (var item in Model.Departments)
+                {<div class="service-block-two">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <figure class="image"><a asp-controller="Departments" asp-action="DepartmentDetails" asp-route-id="@item.Id"><img src="~/Uploads/resource/@item.Photo" alt=""></a></figure>
+                            </div>
+                            <div class="lower-content">
+                                <div class="title-box">
+                                    <span class="icon @item.Icon"></span>
+                                    <h4><a href="department-detail.html">@item.Name</a></h4>
+                                </div>
+                                <div class="text">@item.ShortAbout</div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+
+               
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End service Section -->
+<partial name="_clients" model="Model.Clients"/>
+

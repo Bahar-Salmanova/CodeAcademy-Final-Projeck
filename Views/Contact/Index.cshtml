@@ -1,0 +1,101 @@
+﻿@model CodeClinic.ViewModel.ContactViewModel
+
+
+
+
+<partial name="_breadcrumbs" model="Model.BreadCrumb"/>
+<!-- Map Section -->
+<section class="map-section">
+    <div class="auto-container">
+        <div class="map-outer">
+            <div class="map-canvas"
+                 data-zoom="12"
+                 data-lat="-37.817085"
+                 data-lng="144.955631"
+                 data-type="roadmap"
+                 data-hue="#ffc400"
+                 data-title="Envato"
+                 data-icon-path="/Uploads//icons/map-marker.png"
+                 data-content="Melbourne VIC 3000, Australia<br><a href='mailto:baharshs@code.edu.az'>baharshs@code.edu.az</a>">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Map Section -->
+
+@section Javascript{
+
+    <!--Google Map APi Key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaaCBm4FEmgKs5cfVrh3JYue3Chj1kJMw"></script>
+    <script src="js/map-script.js"></script>
+    <!--End Google Map APi-->
+}
+
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+    <div class="small-container">
+        <div class="sec-title text-center">
+            <span class="sub-title">Kontakt</span>
+            <h2>Mesajinizi Yazin!</h2>
+            <span class="divider"></span>
+        </div>
+
+        <!-- Contact box -->
+        <div class="contact-box">
+            <div class="row">
+                @foreach (var item in Model.SettingLasts)
+                {<div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+    <div class="inner">
+        <span class="icon flaticon-worldwide"></span>
+        <h4><strong>@item.Title</strong></h4>
+        <p>@item.Text</p>
+    </div>
+</div>
+
+                }
+               
+            </div>
+        </div>
+
+        <!-- Form box -->
+        <div class="form-box">
+            <div class="contact-form">
+                <form action="#" method="post" id="email-form">
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                            <div class="response"></div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <input type="text" name="AdSoyad" class="AdSoyad" placeholder="Ad Soyad*">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" name="email" class="email" placeholder="Email Adress *">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="telefon" class="telefon" placeholder="Telefon Nomresi">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <textarea name="contact_message" class="mesaj" placeholder="Mesajiniz"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group col-lg-12 text-center pt-3">
+                            <button class="theme-btn btn-style-one" type="button" id="submit" name="submit-form"><span class="btn-title">Gonder</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Contact Section -->
+<partial name="_clients" model="Model.Clients"/>

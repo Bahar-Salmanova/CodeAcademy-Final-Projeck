@@ -1,0 +1,341 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CodeClinic | Sağlamlıq Bizimlə Gözəldir | Ana Səhifə</title>
+
+    <!-- Stylesheets -->
+    <link href="~/css/bootstrap.css" rel="stylesheet">
+    <link href="~/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+    <link href="~/plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+    <link href="~/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+
+    <!--Color Themes-->
+    <link id="theme-color-file" href="~/css/color-themes/default-theme.css" rel="stylesheet">
+
+    <!--Color Switcher Mockup-->
+    <link href="~/css/color-switcher-design.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="~/~/Uploads//favicon.png" type="image/x-icon">
+    <link rel="icon" href="~/~/Uploads//favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+        <!-- Main Header-->
+        <header class="main-header header-style-one">
+
+            <!-- Header top -->
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <div class="top-left">
+                            <ul class="contact-list clearfix">
+                                <li><i class="flaticon-hospital-1"></i>Nizami küçəsi 203B, AF Business House, 2-ci mərtəbə</li>
+                                <li><i class="flaticon-back-in-time"></i>Bazar ertəsi-Cümə 08:00-17:00 Bazar BAĞLIDIR</li>
+                            </ul>
+                        </div>
+                        <div class="top-right">
+                            <ul class="social-icon-one">
+
+                                <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fab fa-skype"></span></a></li>
+                                <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Top -->
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="auto-container">
+                    <!-- Main box -->
+                    <div class="main-box">
+                        <div class="logo-box">
+                            <div class="logo"><a asp-controller="Home" asp-action="index"><img src="~/Uploads/gallery/Group 188 (1).svg" alt="" title=""></a></div>
+                        </div>
+
+                        <!--Nav Box-->
+                        <div class="nav-outer">
+                            <nav class="nav main-menu">
+                                <ul class="navigation" id="navbar">
+                                    <li class="dropdown">
+                                        <a asp-controller="home" asp-action="index">Ana Səhifə</a>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <span>Səhifələr</span>
+                                        <ul>
+                                            <li><a asp-controller="about" asp-action="index">Haqqımızda</a></li>
+                                            <li><a asp-controller="services" asp-action="index">Servislər</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <span>Həkimlər</span>
+                                        <ul>
+                                            <li><a asp-controller="doctors" asp-action="index">Həkimlər</a></li>
+                                            <li><a asp-controller="doctors" asp-action="doctordetails">Həkimləri Tanıyaq</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <span>Şöbələr</span>
+                                        <ul>
+                                            <li><a asp-controller="departments" asp-action="all">Bütün şöbələr</a></li>
+                                            <li><a asp-controller="Departments" asp-action="all">Kardiologiya</a></li>
+                                            <li><a asp-controller="Departments" asp-action="All">Nevrologiya</a></li>
+                                            <li><a asp-controller="Departments" asp-action="All">Urologiya</a></li>
+                                            <li><a asp-controller="Departments" asp-action="All">Ginekologiya</a></li>
+                                            <li><a asp-controller="Departments" asp-action="All">Pediatriya</a></li>
+                                            <li><a asp-controller="Departments" asp-action="All">Laboratoriya</a></li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <span>Blog</span>
+                                        <ul>
+                                            <li><a asp-controller="blog" asp-action="index">Bloglarımız</a></li>
+
+
+                                        </ul>
+                                    </li>
+
+                                    <li><a asp-controller="contact" asp-action="index">Kontakt</a></li>
+                                    <li><a asp-controller="Home" asp-action="CoomingSoon">SON</a></li>
+
+                                </ul>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                            <div class="outer-box">
+
+                                <a asp-controller="home" asp-action="Appointment" class="theme-btn btn-style-one"><span class="btn-title">Randevu</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sticky Header  -->
+            <div class="sticky-header">
+                <div class="auto-container">
+
+                    <div class="main-box">
+                        <div class="logo-box">
+                            <div class="logo"><a href="index-2.html"><img src="~/Uploads/gallery/Group 188 (1).svg" alt="" title=""></a></div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div><!-- End Sticky Menu -->
+
+
+        </header>
+        <!--End Main Header -->
+        <!--Main Slider-->
+
+
+
+        @RenderBody()
+
+
+
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!--Widgets Section-->
+            <div class="widgets-section" style="background-image: url(/Uploads//background/7.jpg);">
+                <div class="auto-container">
+                    <div class="row">
+                        <!--Big Column-->
+                        <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                            <div class="row">
+                                <!--Footer Column-->
+                                <div class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget about-widget">
+                                        <div class="logo">
+                                            <a href="index-2.html"><img src="~/Uploads/gallery/Group 188 (1).svg" alt="" /></a>
+                                        </div>
+                                        <div class="text">
+                                            <p>CodeClinicin yüksək zövqə əsaslanan daxili tərtibatı özünəməxsusluğu ilə fərqlənir.  </p>
+                                            <p> Dünya standartlarına uyğun tibbi xidməti ölkəmizdə tətbiq edən CodeClinic peşəkar həkimlərin, bilik və təcrübələrini səmimi şəkildə paylaşan tibbi heyətin, düzgün keyfiyyət strategiyasının, ən müasir tibb texnologiyası ilə keyfiyyətli tibbi xidmətə hər tərəfli təminat yaradır. </p>
+                                        </div>
+                                        <ul class="social-icon-three">
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-skype"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget">
+                                        <h2 class="widget-title">Şöbələr</h2>
+                                        <ul class="user-links">
+                                            <li><a asp-controller="departments" asp-action="cardiology">Kardiologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="Neurology">Nevrologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="Urology">Urologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="Gynecological">Ginekologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="Pediatrical">Pediatriya</a></li>
+                                            <li><a asp-controller="departments" asp-action="Laboratory">Laboratoriya</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Big Column-->
+                        <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                            <div class="row">
+                                <!--Footer Column-->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <!--Footer Column-->
+                                    <div class="footer-widget recent-posts">
+                                        <h2 class="widget-title">Ən Son Xəbərlər</h2>
+                                        <!--Footer Column-->
+                                        <div class="widget-content">
+                                            @*@foreach (var item in Model.News)
+                                            {
+                                                <div class="post">
+                                                    <div class="thumb"><a href="blog-post-image.html"><img src="~/Uploads/@item.Photo" alt=""></a></div>
+                                                    <h4><a href="blog-post-image.html">@item.Title</a></h4>
+                                                    <span class="date">@item.Date</span>
+                                                </div>
+                                            }*@
+                                            
+
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <!--Footer Column-->
+                                    <div class="footer-widget contact-widget">
+                                        <h2 class="widget-title">Contact Us</h2>
+                                        <!--Footer Column-->
+                                        <div class="widget-content">
+                                            <ul class="contact-list">
+                                                <li>
+                                                    <span class="icon flaticon-placeholder"></span>
+                                                    <div class="text">Nizami küçəsi 203B, AF Business House, 2-ci mərtəbə</div>
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon flaticon-call-1"></span>
+                                                    <div class="text">
+                                                        Bazar ertəsi-Cümə 08:00-17:00 Bazar BAĞLIDIR
+
+                                                    </div>
+                                                    <a href="tel:+89868679575"><strong>+99450 444 2633</strong></a>
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon flaticon-email"></span>
+                                                    <div class="text">
+                                                        Sualınız varmı?<br>
+                                                        <a href="mailto:info@gmail.com"><strong>codeclinic@tb.az</strong></a>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon flaticon-back-in-time"></span>
+                                                    <div class="text">
+                                                        Bazar ertəsi-Cümə 08:00-17:00<br>
+                                                                                     <strong>Bazar BAĞLIDIR</strong>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer Bottom-->
+            <div class="footer-bottom">
+                <!-- Scroll To Top -->
+                <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+
+
+                        <div class="copyright-text">
+                            <p>Copyright © 2020 <a href="#">Bold Touch</a>All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Main Footer -->
+
+    </div><!-- End Page Wrapper -->
+    <!-- Color Palate / Color Switcher -->
+
+
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <!--Revolution Slider-->
+    <script src="~/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="~/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="~/js/main-slider-script.js"></script>
+    <!--Revolution Slider-->
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.fancybox.js"></script>
+    <script src="~/js/mmenu.polyfills.js"></script>
+    <script src="~/js/jquery.modal.min.js"></script>
+    <script src="~/js/mmenu.js"></script>
+    <script src="~/js/appear.js"></script>
+    <script src="~/js/owl.js"></script>
+    <script src="~/js/jquery.countdown.js"></script>
+    <script src="~/js/wow.js"></script>
+    <script src="~/js/script.js"></script>
+    <!-- Color Setting -->
+    <script src="~/js/color-settings.js"></script>
+
+    @RenderSection("Javascript", required: false)
+
+
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,101 @@
+﻿
+
+@model CodeClinic.ViewModel.DoctorsViewModel
+
+
+<partial name="_breadcrumbs" model="Model.BreadCrumb" />
+
+<!-- Team Section Two -->
+<section class="team-section-two alternate alternate2">
+    <div class="auto-container">
+        <div class="row">
+            @foreach (var item in Model.Doctors)
+            {<div class="team-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a asp-controller="Doctors" asp-action="DoctorDetails" asp-route-id="@item.Id"><img src="~/Uploads/gallery/@item.Photo" alt=""></a></figure>
+                            <ul class="social-links">
+                                @foreach (var items in item.DoctorTeamLinks)
+                                {
+                                    <li><a href="#"><span class="fab @items.Icon"></span></a></li>
+
+                                }
+
+
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h5 class="name"><a asp-controller="Doctors" asp-action="DoctorDetails">@item.FullName</a></h5>
+                            <span class="designation">@item.Position</span>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+
+        </div>
+
+        <div class="sec-bottom-text">Tərəddüd etməyin, daha yaxşı yardım və xidmətlər üçün bizimlə əlaqə saxlayın. <a href="#">Bütün Dr. Komandasını araşdırın</a></div>
+    </div>
+</section>
+<!--End Team Section -->
+<partial name="_patientsay" model="Model.PatientSay" />
+
+<!-- Time Table Section -->
+<section class="time-table-section">
+    <div class="auto-container">
+        <div class="table-outer">
+            <!-- Doctors Time Table -->
+            <table class="doctors-time-table">
+                <thead>
+                    <tr>
+                        <th class="dark">Vaxt Cədvəli</th>
+                        @foreach (var item in Model.AppointmentKind)
+                        {
+                            <th>@item.Name</th>
+
+                        }
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var items in Model.AppointmentTimes)
+                    {
+                        <tr>
+                            <th>@items.Time</th>
+
+
+                        </tr>
+                        @foreach (var ran in Model.Randevu)
+                        {
+                            <tr>
+                                <td>
+                                    <strong>@ran.Time</strong>
+                                    <p> @ran.Date </p>
+                                    <div class="doctor-info">
+
+                                        <h4 class="name">@ran.PasientName</h4>
+
+                                    </div>
+                                </td>
+                                <td class="empty"></td>
+                            </tr>
+
+
+                        }
+
+
+
+                    }
+
+
+                </tbody>
+                </table>
+        </div>
+    </div>
+</section>
+<!-- End Time Table Section -->
+<partial name="_clients" model="Model.Clients" />

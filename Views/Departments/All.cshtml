@@ -1,0 +1,34 @@
+﻿@model CodeClinic.ViewModel.DepartmentDetailsViewModel
+
+
+<partial name="_breadcrumbs" model="Model.BreadCrumb"/>
+    <!-- Services Section -->
+<section class="services-section-two">
+    <div class="auto-container">
+
+        <div class="carousel-outer">
+            <div class="row">
+                @foreach (var item in Model.Departments)
+                {<div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <figure class="image"><a asp-controller="Departments" asp-action="DepartmentDetails" asp-route-id="@item.Id"><img src="~/Uploads/resource/@item.Photo" alt=""></a></figure>
+                            </div>
+                            <div class="lower-content">
+                                <div class="title-box">
+                                    <span class="icon-right @item.Icon"></span>
+                                    <h4><a href="department-detail.html">@item.Name</a></h4>
+                                </div>
+                                <div class="text">@item.ShortAbout</div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End service Section -->
+<partial name="_clients" model="Model.Clients"/>

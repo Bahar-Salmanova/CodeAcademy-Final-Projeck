@@ -1,0 +1,19 @@
+﻿@model CodeClinic.ViewModel.ServisViewModel
+<partial name="_breadcrumbs" model="Model.BreadCrumb" />
+
+
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="auto-container">
+        <partial name="_services" model="Model.DiaqnosticServis" />
+    </div>
+</section>
+<!--End Services Section -->
+
+<partial name="_appoinment" model="Model.GetAppointment"/>
+
+<partial name="_patientsay" model="Model.PatientSays" />
+
+
+<partial name="_clients" model="Model.Clients"/>

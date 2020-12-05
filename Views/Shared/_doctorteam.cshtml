@@ -1,0 +1,54 @@
+﻿
+@model List< CodeClinic.Models.Doctor>
+
+<!-- Team Section -->
+<section class="team-section">
+    <div class="auto-container">
+        <div class="sec-title text-center">
+            <span class="sub-title">Bizim Həkimlərimiz</span>
+            <h2>Xüsusi Həkim Komandamız</h2>
+            <span class="divider"></span>
+        </div>
+
+        <div class="row">
+        @foreach (var item in Model)
+        {<div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                <div class="inner-box">
+                    <figure class="image">
+                    <a asp-controller="doctors" asp-action="doctordetails" asp-route-id="@item.Id"><img  src="~/Uploads/gallery/@item.Photo" alt=""></a>
+                    
+                    </figure>
+                    <ul class="social-links">
+                        @if (item.DoctorTeamLinks!=null)
+                        {@foreach (var items in item.DoctorTeamLinks)
+                            {
+                                <li>
+                                    <a href="#">
+                                        <span class="fab @items.Icon"></span>
+                                    </a>
+                                </li>
+
+                            }
+
+
+
+                    }
+
+
+
+                    </ul>
+                    <div class="info-box">
+                        <h4 class="name"><a asp-controller="Doctors" asp-action="DoctorDetails">@item.FullName</a></h4>
+                        <span class="designation">@item.Position</span>
+                    </div>
+                </div>
+            </div>
+
+        }
+            
+        </div>
+
+        <div class="sec-bottom-text">Tərəddüd etməyin, daha yaxşı yardım və xidmətlər üçün bizimlə əlaqə saxlayın. <a href="#"> Bütün Dr. Komandasını araşdırın</a></div>
+    </div>
+</section>
+<!-- End Team Section -->

@@ -1,0 +1,22 @@
+﻿
+
+@model CodeClinic.ViewModel.BreadCrumbViewModel
+
+<!--Page Title-->
+<section class="page-title" style="background-image: url(/Uploads/background/8.jpg);">
+    <div class="auto-container">
+        <div class="title-outer">
+            <h1>@Model.Title</h1>
+            <ul class="page-breadcrumb">
+                @foreach (var item in Model.Links)
+                {
+                    <li><a asp-controller="home" asp-action="index">@item</a></li>
+
+
+                }
+
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->

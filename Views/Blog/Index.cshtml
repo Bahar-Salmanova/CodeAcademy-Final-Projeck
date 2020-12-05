@@ -1,0 +1,35 @@
+﻿@model CodeClinic.ViewModel.BlogViewModel
+
+
+<partial name="_breadcrumbs" model="Model.BreadCrumb"/>
+<!-- Blog Section -->
+<section class="blog-section blog-checkerboard">
+    <div class="auto-container">
+        <!-- News Block -->
+
+
+        @foreach (var item in Model.Diseas)
+        {<div class="news-block-three">
+    <div class="inner-box">
+        <div class="image-box">
+            <figure class="image"><a href="blog-post-image.html"><img src="~/Uploads/gallery/@item.Photo" alt=""></a></figure>
+            
+        </div>
+        <div class="content-box">
+            <h4><a href="blog-post-image.html">@item.Name</a></h4>
+            <div class="text">@item.ShortAbout</div>
+            <a asp-controller="blog" asp-action="BlogReadMore" asp-route-id="@item.Id" class ="theme-btn btn-style-one read-more"><span class="btn-title">Dəvamı</span></a>
+
+        </div>
+    </div>
+</div>
+
+        }
+        
+
+        <!-- News Block -->
+       
+    </div>
+</section>
+<!--End Blog Section -->
+<partial name="_clients" model="Model.Clients"/>

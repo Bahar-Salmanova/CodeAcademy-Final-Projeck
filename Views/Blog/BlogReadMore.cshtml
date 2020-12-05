@@ -1,0 +1,51 @@
+﻿@model CodeClinic.ViewModel.BlogReadMoreViewModel
+
+
+
+ <!-
+
+
+-Page Title-->
+     <partial name="_breadcrumbs" model="Model.BreadCrumb" />
+<!--End Page Title-->
+<!-- Sidebar Page Container -->
+<div class="sidebar-page-container">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Content Side-->
+            <div class="content-side col-lg-12 col-md-12 col-sm-12">
+                <div class="blog-post">
+                    <!-- News Block -->
+                    <div class="news-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <div class="single-item-carousel owl-carousel owl-theme default-arrows">
+                                    <div class="slide-item">
+                                        <a href="#" class="lightbox-image" data-fancybox="gallery"><img src="~/Uploads/gallery/@Model.Diseas.Photo" alt=""></a>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="lower-content">
+
+                                <h3>@Model.Diseas.Name</h3>
+                                <p>
+                                    @Model.Diseas.About
+                                </p>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                   
+<partial name="_clients" model="Model.Clients" />

@@ -1,0 +1,141 @@
+﻿
+
+
+@model  CodeClinic.ViewModel.DoctorDetailsViewModel
+
+<partial name="_breadcrumbs" model="Model.BreadCrumb"/>
+
+<!-- Doctor Detail Section -->
+
+<section class="doctor-detail-section">
+    <div class="auto-container">
+        <div class="row">
+            <!-- Content Side -->
+            <div class="content-side col-lg-8 col-md-12 col-sm-12 order-2">
+                <div class="docter-detail">
+                    <h3 class="name">@Model.Doctors.FullName</h3>
+
+                    <div class="text"> @Model.Doctors.About</div>
+                    <ul class="doctor-info-list">
+                        <li>
+                            <strong>Speciality</strong>
+                            <p>@Model.Doctors.Speciality</p>
+                        </li>
+                        <li>
+                            <strong>Education</strong>
+                            <p>@Model.Doctors.Education</p>
+                        </li>
+                        <li>
+                            <strong>Experience</strong>
+                            <p>@Model.Doctors.Experience</p>
+                        </li>
+                        <li>
+                            <strong>Address</strong>
+                            <p>@Model.Doctors.Address</p>
+                        </li>
+                        <li>
+                            <strong>Timing</strong>
+                            <p>@Model.Doctors.Timing</p>
+                        </li>
+                        <li>
+                            <strong>Phone</strong>
+                            <p><a href="#">@Model.Doctors.Phone</a></p>
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            <p><a href="#">@Model.Doctors.Email</a></p>
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            <p><a href="#">@Model.Doctors.Website</a></p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="appointment-form default-form">
+                    <div class="sec-title">
+                        
+                        <h2>Randevu Al</h2>
+                        <span class="divider"></span>
+                    </div>
+
+                    <!--Comment Form-->
+                    <form action="#" method="post" id="email-form">
+                        <div class="row">
+                            <div class="form-group col-lg-6 col-md-12">
+                                <input type="text" name="username" placeholder="Adınız*">
+                            </div>
+
+                            <div class="form-group col-lg-6 col-md-12">
+                                <input type="text" name="phone" placeholder="Telefon Nömrəniz*">
+                            </div>
+
+                            <div class="form-group col-lg-12 col-md-12">
+                                <input type="email" name="email" placeholder=" Email Ünvanınız*">
+                            </div>
+
+                            <div class="form-group col-lg-12 col-md-12">
+                                <textarea name="contact_message" placeholder="Pasient Haqqında Məlumat"></textarea>
+                            </div>
+
+                            <div class="form-group col-lg-12 col-md-12">
+                                <button class="theme-btn btn-style-one" type="button" name="submit-form"><span class="btn-title">Göndər</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sidebar Side -->
+            <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+                <div class="sidebar">
+                    <!-- Team Block -->
+                    <div class="team-block wow fadeInUp">
+                        <div class="inner-box">
+                            <figure class="image"><img src="~/Uploads/gallery/@Model.Doctors.Photo" alt=""></figure>
+                            <ul class="social-links">
+                                @foreach (var items in Model.DoctorTeamLinks)
+                                {
+                                    <li><a href="#"><span class="fab @items.Icon"></span></a></li>
+
+                                }
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Availability -->
+                    <div class="docter-availability">
+                        <div class="inner">
+                            <div class="sec-title">
+                                <span class="sub-title">@Model.Doctors.FullName həkimin klinikada olma vaxtı.</span>
+                                <h2>İş Vaxtları</h2>
+                                <span class="divider"></span>
+                            </div>
+                            <ul class="timing-list-two">
+                                
+                                
+                                    <li>@Model.DoctorOpeningHourses.Date  @Model.DoctorOpeningHourses.Time</li>
+
+
+                                
+
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- End Doctor Detail Section -->
+
+<partial name="_doctorteam" model="Model.Doctor"/>
+
+
+<partial name="_clients" model="Model.Clients"/>

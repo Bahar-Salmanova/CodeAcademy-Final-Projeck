@@ -1,0 +1,206 @@
+﻿@model CodeClinic.ViewModel.AboutViewModel
+
+<partial name="_breadcrumbs"  model="Model.BreadCrumb"/>
+
+
+<partial name="_clinicalcare" model="Model.ResearchClinic"/>
+
+<!-- Fun Fact Section Two-->
+<section class="fun-fact-section-two">
+    <div class="auto-container">
+        <div class="row">
+            <!--Column-->
+            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                <div class="count-box">
+                    <div class="icon-box"><span class="icon flaticon-user-experience"></span></div>
+                    <h4 class="counter-title">İllərin Təcrübəsi</h4>
+                    <span class="count-text" data-speed="3000" data-stop="25">0</span>
+                </div>
+            </div>
+
+            <!--Column-->
+            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+                <div class="count-box">
+                    <div class="icon-box"><span class="icon flaticon-team"></span></div>
+                    <h4 class="counter-title">Tibbi Xüsusiyyətlər</h4>
+                    <span class="count-text" data-speed="3000" data-stop="470">0</span>
+                </div>
+            </div>
+
+            <!--Column-->
+            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
+                <div class="count-box">
+                    <div class="icon-box"><span class="icon flaticon-hospital"></span></div>
+                    <h4 class="counter-title">Tibbi Heyətimiz</h4>
+                    <span class="count-text" data-speed="3000" data-stop="689">0</span>
+                </div>
+            </div>
+
+            <!--Column-->
+            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
+                <div class="count-box">
+                    <div class="icon-box"><span class="icon flaticon-add-friend"></span></div>
+                    <h4 class="counter-title">Xoşbəxt Pasientlər</h4>
+                    <span class="count-text" data-speed="3000" data-stop="9036">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Fun Fact Section Two -->
+<!-- Appointment Section Three -->
+<section class="appointment-section-three" style="background-image: url(~/Uploads//background/2.jpg);">
+    <div class="auto-container">
+        <div class="row">
+
+            <!-- Content Column -->
+            <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                <div class="inner-column">
+                    <span class="title">Müayinə üçün həkimə ehtiyacınız var?</span>
+                    <h3>
+                        Yalnız Randevu Edin <br> Hər şey qaydasındadı!
+                    </h3>
+                    <div class="text">Bizimlə Əlaqə Saxlayın: <strong>@Model.GetAppointment.Call</strong></div>
+
+                    <div class="timetable-info">
+                        <h3>İş Saatlarımız</h3>
+                        <ul class="timing-list">
+                            @foreach (var item in Model.ClinicOpeningHours)
+                            {
+                                <li>@item.Date <span>@item.Time</span></li>
+
+                            }
+                            
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-column col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="appointment-form default-form">
+                        <!--Comment Form-->
+                        <form action="#" method="post" id="email-form">
+                            <div class="form-group">
+                                <div class="response"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="username" placeholder="Adınız">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email Ünvanınız *">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="phone" placeholder="Telefonunuz">
+                            </div>
+
+                            <div class="form-group">
+                                <textarea name="contact_message" placeholder="Pasient haqqında bizə məlumat verin"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <button class="theme-btn btn-style-one" type="button" name="submit-form"><span class="btn-title">Məlumatı Göndər</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Appointment Section Three -->
+
+
+<partial name="_doctorteam"model="Model.Doctors" />
+
+
+<!-- Skill Section -->
+<section class="skill-section">
+    <div class="outer-container clearfix">
+        <div class="skill-column">
+            <div class="inner-column">
+                <div class="sec-title">
+                    <span class="sub-title">Ən Yaxşısı</span>
+                    <h2>Yüksək Texnologiya ilə hazırlanmış avadanlıqlar, Pualar və Artilleriyalar.</h2>
+                    <span class="divider"></span>
+                    <div class="text">Ölkəmiz və millətimiz tarixi günlər yaşayır. Ali Baş Komandanımızın rəhbərliyi altında Azərbaycan şanlı tarixini yeniləyir. Həqiqətən, xoşbəxt insanlarıq ki, ölkəmizin bu tarixi günlərinin canlı şahidi və iştirakçısı oluruq. Azərbaycan, möhtərəm cənab prezidentimizin uzaqgörən siyasətinin bəhrələrini toplayır - həm hərb meydanında, həm də  diplomatiyada.</div>
+                </div>
+
+                <!--Skills-->
+                <div class="skills">
+                    <!--Skill Item-->
+                    <div class="skill-item">
+                        <div class="skill-header clearfix">
+                            <div class="skill-title">Laçın</div>
+                            <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="3000" data-stop="55">0</span>%</div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="bar-inner"><div class="bar progress-line" data-width="55"></div></div>
+                        </div>
+                    </div>
+
+                    <!--Skill Item-->
+                    <div class="skill-item">
+                        <div class="skill-header clearfix">
+                            <div class="skill-title">Şuşa</div>
+                            <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="3000" data-stop="100">0</span>%</div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="bar-inner"><div class="bar progress-line" data-width="100"></div></div>
+                        </div>
+                    </div>
+
+                    <!--Skill Item-->
+                    <div class="skill-item">
+                        <div class="skill-header clearfix">
+                            <div class="skill-title">Xocalı</div>
+                            <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="3000" data-stop="88">0</span>%</div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="bar-inner"><div class="bar progress-line" data-width="88"></div></div>
+                        </div>
+                    </div>
+
+                    <!--Skill Item-->
+                    <div class="skill-item">
+                        <div class="skill-header clearfix">
+                            <div class="skill-title">Kəlbəcər</div>
+                            <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="3000" data-stop="78">0</span>%</div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="bar-inner"><div class="bar progress-line" data-width="78"></div></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header clearfix">
+                            <div class="skill-title">QARABAĞ</div>
+                            <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="3000" data-stop="92">0</span>%</div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="bar-inner"><div class="bar progress-line" data-width="92"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class="image-column" style="background-image: url(/Uploads/resource/image-7.jpg);">
+            <div class="image-box">
+                <figure class="image"><img src="/Uploads/resource/image-7.jpg" alt=""></figure>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Skill Section -->
+
+
+<partial name="_patientsay" model="Model.PatientSays"/>
+
+
+<partial name="_clients" model="Model.Clients"/>
