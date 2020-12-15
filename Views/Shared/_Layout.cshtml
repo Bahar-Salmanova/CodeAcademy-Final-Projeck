@@ -86,25 +86,26 @@
                                             <li><a asp-controller="about" asp-action="index">Haqqımızda</a></li>
                                             <li><a asp-controller="services" asp-action="index">Servislər</a></li>
 
+
                                         </ul>
                                     </li>
                                     <li class="dropdown">
                                         <span>Həkimlər</span>
                                         <ul>
                                             <li><a asp-controller="doctors" asp-action="index">Həkimlər</a></li>
-                                            <li><a asp-controller="doctors" asp-action="doctordetails">Həkimləri Tanıyaq</a></li>
+                                            @*<li><a asp-controller="doctors" asp-action="doctordetails">Həkimləri Tanıyaq</a></li>*@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
                                         <span>Şöbələr</span>
                                         <ul>
                                             <li><a asp-controller="departments" asp-action="all">Bütün şöbələr</a></li>
-                                            <li><a asp-controller="Departments" asp-action="all">Kardiologiya</a></li>
-                                            <li><a asp-controller="Departments" asp-action="All">Nevrologiya</a></li>
-                                            <li><a asp-controller="Departments" asp-action="All">Urologiya</a></li>
-                                            <li><a asp-controller="Departments" asp-action="All">Ginekologiya</a></li>
-                                            <li><a asp-controller="Departments" asp-action="All">Pediatriya</a></li>
-                                            <li><a asp-controller="Departments" asp-action="All">Laboratoriya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="1">Kardiologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="5">Nevrologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="6">Urologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="9">Ginekologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="10">Pediatriya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="11">Laboratoriya</a></li>
 
                                         </ul>
                                     </li>
@@ -120,8 +121,10 @@
 
                                     <li><a asp-controller="contact" asp-action="index">Kontakt</a></li>
                                     <li><a asp-controller="Home" asp-action="CoomingSoon">SON</a></li>
+                                    <li><a asp-area="admin" asp-controller="user" asp-action="login"><i class="fas fa-user-cog"></i></a></li>
 
-                                </ul>
+                                   
+                                </ul>@*<a asp-area="admin" asp-controller="user" asp-action="login">Admin</a>*@
                             </nav>
                             <!-- Main Menu End-->
 
@@ -173,7 +176,7 @@
                                 <div class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12">
                                     <div class="footer-widget about-widget">
                                         <div class="logo">
-                                            <a href="index-2.html"><img src="~/Uploads/gallery/Group 188 (1).svg" alt="" /></a>
+                                            <a href="index-2.html"><img src="~/Uploads/gallery/white-Logo.svg" alt="" /></a>
                                         </div>
                                         <div class="text">
                                             <p>CodeClinicin yüksək zövqə əsaslanan daxili tərtibatı özünəməxsusluğu ilə fərqlənir.  </p>
@@ -194,12 +197,12 @@
                                     <div class="footer-widget">
                                         <h2 class="widget-title">Şöbələr</h2>
                                         <ul class="user-links">
-                                            <li><a asp-controller="departments" asp-action="cardiology">Kardiologiya</a></li>
-                                            <li><a asp-controller="departments" asp-action="Neurology">Nevrologiya</a></li>
-                                            <li><a asp-controller="departments" asp-action="Urology">Urologiya</a></li>
-                                            <li><a asp-controller="departments" asp-action="Gynecological">Ginekologiya</a></li>
-                                            <li><a asp-controller="departments" asp-action="Pediatrical">Pediatriya</a></li>
-                                            <li><a asp-controller="departments" asp-action="Laboratory">Laboratoriya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="1">Kardiologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="5">Nevrologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="6">Urologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="9">Ginekologiya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="10">Pediatriya</a></li>
+                                            <li><a asp-controller="departments" asp-action="DepartmentDetails" asp-route-id="11">Laboratoriya</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -216,17 +219,23 @@
                                         <h2 class="widget-title">Ən Son Xəbərlər</h2>
                                         <!--Footer Column-->
                                         <div class="widget-content">
-                                            @*@foreach (var item in Model.News)
-                                            {
-                                                <div class="post">
-                                                    <div class="thumb"><a href="blog-post-image.html"><img src="~/Uploads/@item.Photo" alt=""></a></div>
-                                                    <h4><a href="blog-post-image.html">@item.Title</a></h4>
-                                                    <span class="date">@item.Date</span>
-                                                </div>
-                                            }*@
-                                            
 
-                                            
+                                            <div class="post">
+                                                <div class="thumb"><a href="blog-post-image.html"><img src="~/Uploads/gallery/telim.jpg" alt=""></a></div>
+                                                <h4><a href="blog-post-image.html">İlk tibbi yardım təlimlərinə start verildi</a></h4>
+                                                <span class="date">2020-10-11</span>
+                                            </div>
+                                            <div class="post">
+                                                <div class="thumb"><a href="blog-post-image.html"><img src="~/Uploads/gallery/dez1.jpg" alt=""></a></div>
+                                                <h4><a href="blog-post-image.html">Dezinfeksiya tədbirləri </a></h4>
+                                                <span class="date">2020-11-10</span>
+                                            </div>
+                                            <div class="post">
+                                                <div class="thumb"><a href="blog-post-image.html"><img src="~/Uploads/gallery/qarabag1.jpg" alt=""></a></div>
+                                                <h4><a href="blog-post-image.html">Ordumuzla fəxr edirik və hər zaman ordumuzun yanında olacağıq.                                                         </a></h4>
+                                                <span class="date">2020-09-08</span>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -288,7 +297,7 @@
 
 
                         <div class="copyright-text">
-                            <p>Copyright © 2020 <a href="#">Bold Touch</a>All Rights Reserved.</p>
+                            <p> 2020 All Rights Reserved Bahar</p>
                         </div>
                     </div>
                 </div>

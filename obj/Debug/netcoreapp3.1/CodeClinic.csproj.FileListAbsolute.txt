@@ -194,8 +194,6 @@ C:\Users\User\source\repos\CodeClinic\CodeClinic\bin\Debug\netcoreapp3.1\runtime
 C:\Users\User\source\repos\CodeClinic\CodeClinic\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\User\source\repos\CodeClinic\CodeClinic\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\User\source\repos\CodeClinic\CodeClinic\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\CodeClinic.csproj.CoreCompileInputs.cache
-C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\CodeClinic.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Promoes\Create.cshtml.g.cs
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Promoes\Delete.cshtml.g.cs
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Promoes\Details.cshtml.g.cs
@@ -261,11 +259,6 @@ C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\A
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DoctorOpeningHours\Details.cshtml.g.cs
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DoctorOpeningHours\Edit.cshtml.g.cs
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DoctorOpeningHours\Index.cshtml.g.cs
-C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Randevus\Create.cshtml.g.cs
-C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Randevus\Delete.cshtml.g.cs
-C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Randevus\Details.cshtml.g.cs
-C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Randevus\Edit.cshtml.g.cs
-C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Randevus\Index.cshtml.g.cs
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\PatientSays\Create.cshtml.g.cs
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\PatientSays\Delete.cshtml.g.cs
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\PatientSays\Details.cshtml.g.cs
@@ -276,3 +269,11 @@ C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\A
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\WelcomeClinics\Details.cshtml.g.cs
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\WelcomeClinics\Edit.cshtml.g.cs
 C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\WelcomeClinics\Index.cshtml.g.cs
+C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\User\Login.cshtml.g.cs
+C:\Users\User\source\repos\CodeClinic\CodeClinic\bin\Debug\netcoreapp3.1\CryptoHelper.dll
+C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\CodeClinic.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\CodeClinic.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Randevus\Index.cshtml.g.cs
+C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Randevus\Details.cshtml.g.cs
+C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Randevus\Create.cshtml.g.cs
+C:\Users\User\source\repos\CodeClinic\CodeClinic\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Randevus\Delete.cshtml.g.cs

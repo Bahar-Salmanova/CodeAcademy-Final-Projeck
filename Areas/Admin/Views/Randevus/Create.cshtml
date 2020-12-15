@@ -1,4 +1,5 @@
-﻿@model CodeClinic.Models.Randevu
+﻿
+@model CodeClinic.Models.Randevu
 
 @{
     ViewData["Title"] = "Create";
@@ -7,7 +8,7 @@
 
 <h1>Yarat</h1>
 
-<h4>Randevu</h4>
+<h4>Randevular</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -19,19 +20,9 @@
                 <span asp-validation-for="PasientName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Time" class="control-label"></label>
-                <input asp-for="Time" class="form-control" />
-                <span asp-validation-for="Time" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
-                <span asp-validation-for="Date" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Message" class="control-label"></label>
@@ -39,8 +30,18 @@
                 <span asp-validation-for="Message" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Time" class="control-label"></label>
+                <input asp-for="Time" class="form-control" />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="DepartmentsId" class="control-label"></label>
-                <select asp-for="DepartmentsId" class ="form-control" asp-items="ViewBag.DepartmentsId"></select>
+                <select asp-for="DepartmentsId" class="form-control" asp-items="ViewBag.DoctorId"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Yarat" class="btn btn-primary" />

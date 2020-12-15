@@ -6,6 +6,7 @@
 <partial name="_clinicalcare" model="Model.ResearchClinic"/>
 
 <!-- Fun Fact Section Two-->
+`
 <section class="fun-fact-section-two">
     <div class="auto-container">
         <div class="row">
@@ -81,29 +82,40 @@
                 <div class="inner-column">
                     <div class="appointment-form default-form">
                         <!--Comment Form-->
-                        <form action="#" method="post" id="email-form">
+                        <form asp-action="About"  method="post">
                             <div class="form-group">
-                                <div class="response"></div>
+                                <div class="response"></div>`
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="AboutPasient.Name">Ad</label>
+                                <input type="text" asp-for="AboutPasient.Name" class="form-control"  required="">
+                                <span asp-validation-for="AboutPasient.Name" class="text-danger"></span>
+
                             </div>
 
                             <div class="form-group">
-                                <input type="text" name="username" placeholder="Adınız">
+                                <label asp-for="AboutPasient.Email">Email</label>
+                                <input type="text" asp-for="AboutPasient.Email" class="form-control"  required="">
+                                <span asp-validation-for="AboutPasient.Email" class="text-danger"></span>
+
                             </div>
 
                             <div class="form-group">
-                                <input type="email" name="email" placeholder="Email Ünvanınız *">
+                                <label asp-for="AboutPasient.Telephone">Telefon</label>
+                                <input type="text" asp-for="AboutPasient.Telephone" class="form-control" required="">
+                                <span asp-validation-for="AboutPasient.Telephone" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
-                                <input type="text" name="phone" placeholder="Telefonunuz">
+                                <label asp-for="AboutPasient.About">Pasient Haqqında</label>
+                                <textarea asp-for="AboutPasient.About" class="form-control" required=""></textarea>
+                                <span asp-validation-for="AboutPasient.About" class="text-danger"></span>
                             </div>
-
+                            
+                            <br />
+                            <hr />
                             <div class="form-group">
-                                <textarea name="contact_message" placeholder="Pasient haqqında bizə məlumat verin"></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <button class="theme-btn btn-style-one" type="button" name="submit-form"><span class="btn-title">Məlumatı Göndər</span></button>
+                                <button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="btn-title">Məlumatı Göndər</span></button>
                             </div>
                         </form>
                     </div>

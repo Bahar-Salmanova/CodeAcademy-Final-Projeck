@@ -42,7 +42,6 @@
 <!--End Team Section -->
 <partial name="_patientsay" model="Model.PatientSay" />
 
-<!-- Time Table Section -->
 <section class="time-table-section">
     <div class="auto-container">
         <div class="table-outer">
@@ -52,50 +51,132 @@
                     <tr>
                         <th class="dark">Vaxt Cədvəli</th>
                         @foreach (var item in Model.AppointmentKind)
-                        {
-                            <th>@item.Name</th>
-
-                        }
-
-
+	{
+                    <th>@item.Name</th>
+	}
+                        
+                        
                     </tr>
                 </thead>
 
                 <tbody>
-                    @foreach (var items in Model.AppointmentTimes)
-                    {
-                        <tr>
-                            <th>@items.Time</th>
+                    <!-- Table Row 08:00am -->
+                    <tr>
+                        <th>09:00</th>
+                        <td>
+                            @if (Model.Randevus.Time == "09:00")
+                            {<strong>Dental Care</strong>
+                                <p> 9:00</p>
+                                <div class="doctor-info">
+                                    <h4 class="name">@Model.Randevus.PasientName</h4>
+                                </div>
+                            }
 
+                                            </td>
+                        <td class="empty"></td>
+                        
+                    </tr>
 
-                        </tr>
-                        @foreach (var ran in Model.Randevu)
-                        {
-                            <tr>
-                                <td>
-                                    <strong>@ran.Time</strong>
-                                    <p> @ran.Date </p>
-                                    <div class="doctor-info">
+                    <!-- Table Row 10:00am -->
+                    <tr>
+                        <th>10:00</th>
+                        <td>
+                            @if (Model.Randevus.Time == "10:00")
+                            {<strong>Dental Care</strong>
+                                <p> 10:00</p>
+                                <div class="doctor-info">
+                                    <h4 class="name">@Model.Randevus.PasientName</h4>
+                                </div>
+                            }
 
-                                        <h4 class="name">@ran.PasientName</h4>
+                        </td>
+                        <td class="empty"></td>
+                    </tr>
 
-                                    </div>
-                                </td>
-                                <td class="empty"></td>
-                            </tr>
+                    <!-- Table Row 11:00am -->
+                    <tr>
+                        <th>11:00</th>
+                        <td>
+                            @if (Model.Randevus.Time == "11:00")
+                            {<strong>Dental Care</strong>
+                                <p> 11:00</p>
+                                <div class="doctor-info">
+                                    <h4 class="name">@Model.Randevus.PasientName</h4>
+                                </div>
+                            }
 
+                        </td>
+                        <td class="empty"></td>
 
-                        }
+                    </tr>
 
+                    <!-- Table Row 11:30am -->
+                    <tr>
+                        <th>12:00</th>
+                        <td>
+                            @if (Model.Randevus.Time == "12:00")
+                            {<strong>Dental Care</strong>
+                                <p> 12:00</p>
+                                <div class="doctor-info">
+                                    <h4 class="name">@Model.Randevus.PasientName</h4>
+                                </div>
+                            }
 
+                        </td>
+                        <td class="empty"></td>
+                    </tr>
 
-                    }
+                    <!-- Table Row 12:00am -->
+                    <tr>
+                        <th>13:00</th>
+                        <td>
+                            @if (Model.Randevus.Time == "13:00")
+                            {<strong>Dental Care</strong>
+                                <p> 13:00</p>
+                                <div class="doctor-info">
+                                    <h4 class="name">@Model.Randevus.PasientName</h4>
+                                </div>
+                            }
 
+                        </td>
+                        <td class="empty"></td>
 
+                    </tr>
+
+                    <!-- Table Row 01:00pm -->
+                    <tr>
+                        <th>14:00</th>
+                        <td>
+                            @if (Model.Randevus.Time == "14:00")
+                            {<strong>Dental Care</strong>
+                                <p> 14:00</p>
+                                <div class="doctor-info">
+                                    <h4 class="name">@Model.Randevus.PasientName</h4>
+                                </div>
+                            }
+
+                        </td>
+                        <td class="empty"></td>
+                    </tr>
+
+                    <!-- Table Row 02:00pm -->
+                    <tr>
+                        <th>15:00</th>
+                        <td>
+                            @if (Model.Randevus.Time == "15:00")
+                            {<strong>Dental Care</strong>
+                                <p> 15:00</p>
+                                <div class="doctor-info">
+                                    <h4 class="name">@Model.Randevus.PasientName</h4>
+                                </div>
+                            }
+
+                        </td>
+                        <td class="empty"></td>
+                    </tr>
                 </tbody>
-                </table>
+            </table>
         </div>
     </div>
 </section>
-<!-- End Time Table Section -->
 <partial name="_clients" model="Model.Clients" />

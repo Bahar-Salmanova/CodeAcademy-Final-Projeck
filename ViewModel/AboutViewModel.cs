@@ -21,8 +21,9 @@ namespace CodeClinic.ViewModel
 
         public List<Clients> Clients { get; set; }
         public BreadCrumbViewModel BreadCrumb { get; set; }
-        
-          
+        public AboutPasient AboutPasient { get; set; }
+
+
 
 
     }

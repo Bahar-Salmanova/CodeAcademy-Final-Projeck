@@ -22,10 +22,12 @@ namespace CodeClinic.ViewModel
         public List< Clients > Clients { get; set; }
         public BreadCrumbViewModel BreadCrumb { get; set; }
         public List< Randevu >Randevu { get; set; }
+        public Randevu Randevus { get; set; }
+        public AboutPasient AboutPasient { get; set; }
 
 
-       
-       
+
+
 
 
 

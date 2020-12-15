@@ -1,60 +1,65 @@
-﻿
-
-
+﻿@model CodeClinic.Models.Randevu
 <div class="model">
-    <!-- Contact Form -->
+    <!-- Contact Form -->S
     <div class="contact-form-two">
         <div class="title-box">
             <h4>Randevu alin</h4>
             <div class="text">Aşağıdakı formu doldurmaqla CodeClinic-də fəaliyyət göstərən həkimlərin qəbuluna öncədən yazıla bilərsiniz.</div>
         </div>
-        <form method="post" id="contact-form">
+        <form method="post" asp-action="Appointment">
             <div class="row clearfix">
                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                    <input type="text" name="username" placeholder="Adiniz" required="">
+                    <label asp-for="PasientName">Pasientin Adı</label>
+                    <input type="text" asp-for="PasientName"  class="form-control" required="">
+                    <span asp-validation-for="PasientName" class="text-danger"></span>
                 </div>
 
-               
 
                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                    <input type="email" name="email" placeholder="Email Adresiniz" required="">
+                    <label asp-for="Email">Email</label>
+                    <input type="text" asp-for="Email"  class="form-control" required="">
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                    <select name="departments" id="departments" onchange="appointment();" required>
-                        <option value="default" selected disabled>Şöbəni Seçiniz</option>
+                    <select asp-for="DepartmentsId" asp-items="ViewBag.departments" class="form-control" id="departments" onchange="appointment();" required>
+                        @*<option value="default" selected disabled>Şöbəni Seçiniz</option>
                         <option value="Cardiology">Kardiologiya</option>
                         <option value="Neurology">Nevrologiya</option>
                         <option value="Urology">Urologiya</option>
                         <option value="Gynecological">Ginekologiya</option>
                         <option value="Pediatrical">Pediatriya</option>
-                        <option value="Laboratory">Laboratoriya</option>
+                        <option value="Laboratory">Laboratoriya</option>*@
                     </select>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                    <input type="date" name="date" placeholder="Select Date" required="">
+                    <input type="date" name="date" placeholder="Günü seçiniz" required="">
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                    <select name="time" required id="timing">
+                    <select asp-for="Time" required id="timing">
                         <option value="" selected disabled>Vaxtı Seçiniz</option>
-                        <option value="" data-value="default" disabled>Please select a department</option>
-                        <option value="09:00 - 15:00" data-value="Cardiology">09:00 - 15:00</option>
-                        <option value="10:00 - 15:00" data-value="Neurology">10:00 - 15:00</option>
-                        <option value="09:00 - 14:00" data-value="Urology">09:00 - 14:00</option>
-                        <option value="14:00 - 17:00" data-value="Urology">14:00 - 17:00</option>
-                        <option value="09:00 - 13:00" data-value="Gynecological">09:00 - 13:00</option>
-                        <option value="13:00 - 17:00" data-value="Pediatrical">13:00 - 17:00</option>
-                        <option value="09:00 - 17:00" data-value="Laboratory">09:00 - 17:00</option>
+                        <option value="" data-value="default" disabled></option>
+                        <option value="09:00 - 15:00" data-value="1">09:00 - 15:00</option>
+                        <option value="10:00 - 15:00" data-value="2">10:00 - 15:00</option>
+                        <option value="09:00 - 14:00" data-value="3">09:00 - 14:00</option>
+                        <option value="09:00 - 13:00" data-value="4">09:00 - 13:00</option>
+                        <option value="13:00 - 17:00" data-value="5">13:00 - 17:00</option>
+                        <option value="09:00 - 17:00" data-value="6">09:00 - 17:00</option>
                     </select>
                 </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                    <textarea name="message" placeholder="Mesajınızı Yazın" required=""></textarea>
+
+                    <label asp-for="Message">Mesajınız</label>
+                    <textarea asp-for="Message" class="form-control" required=""></textarea>
+                    <span asp-validation-for="Message" class="text-danger"></span>
                 </div>
+                @*<div asp-validation-summary="All"></div>*@
 
                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+
                     <button class="theme-btn btn-style-three small" type="submit" name="submit-form"><span class="btn-title">Göndər</span></button>
                 </div>
             </div>

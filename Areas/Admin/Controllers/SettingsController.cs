@@ -9,9 +9,11 @@ using CodeClinic.Data;
 using CodeClinic.Models;
 using CodeClinic.Helpers;
 using System.IO;
+using CodeClinic.Filters;
 
 namespace CodeClinic.Areas.Admin.Controllers
 {
+       [TypeFilter(typeof(Auth))]
     [Area("Admin")]
     public class SettingsController : Controller
     {

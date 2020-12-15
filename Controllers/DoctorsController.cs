@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CodeClinic.Data;
+using CodeClinic.Models;
 using CodeClinic.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +32,7 @@ namespace CodeClinic.Controllers
                 DoctorTeamLinks = _context.DoctorTeamLinks.Include(d => d.Doctor).ToList(),
                 PatientSay = _context.PatientSays.Take(3).ToList(),
                Randevu=_context.Randevu.ToList(),
+               Randevus=_context.Randevu.FirstOrDefault(),
                 AppointmentKind=_context.AppointmentKind.ToList(),
                 ClinicOpeningHours = _context.ClinicOpeningHours.ToList(),
                 AppointmentTimes = _context.AppointmentTimes.ToList(),
@@ -79,6 +81,24 @@ namespace CodeClinic.Controllers
 
             };
      return View(model);
+            
+        }
+        
+        [HttpPost]
+        [Route("/{controller}/{action}/{id?}")]
+        public IActionResult DoctorDetails(AboutPasient aboutPasient)
+        {
+            AboutPasient pasient = new AboutPasient
+            {
+                Name = aboutPasient.Name,
+                Email = aboutPasient.Email,
+                Telephone = aboutPasient.Telephone,
+                About = aboutPasient.About
+            };
+            _context.AboutPasients.Add(pasient);
+            _context.SaveChanges();
+            return RedirectToAction("index");
         }
     }
+  
 }

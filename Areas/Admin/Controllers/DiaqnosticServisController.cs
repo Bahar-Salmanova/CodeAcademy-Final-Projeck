@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using CodeClinic.Data;
 using CodeClinic.Models;
 using CodeClinic.Helpers;
+using CodeClinic.Filters;
 
 namespace CodeClinic.Areas.Admin.Controllers
 {
+    [TypeFilter(typeof(Auth))]
     [Area("Admin")]
     public class DiaqnosticServisController : Controller
     {

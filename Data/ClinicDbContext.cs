@@ -41,6 +41,10 @@ namespace CodeClinic.Data
         public DbSet<AppointmentTime> AppointmentTimes { get; set; }
         public DbSet<Diseas> Diseases { get; set; }
         public DbSet<Randevu> Randevu { get; set; }
+        public DbSet<AboutPasient> AboutPasients { get; set; }
+        public DbSet<User> User { get; set; }
+
+
 
 
 

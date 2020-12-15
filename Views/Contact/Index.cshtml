@@ -1,7 +1,10 @@
-﻿@model CodeClinic.ViewModel.ContactViewModel
+﻿
 
 
 
+
+
+@model CodeClinic.ViewModel.ContactViewModel
 
 <partial name="_breadcrumbs" model="Model.BreadCrumb"/>
 <!-- Map Section -->
@@ -10,11 +13,11 @@
         <div class="map-outer">
             <div class="map-canvas"
                  data-zoom="12"
-                 data-lat="-37.817085"
-                 data-lng="144.955631"
+                 data-lat="40.4093° N"
+                 data-lng="49.8671° E"
                  data-type="roadmap"
                  data-hue="#ffc400"
-                 data-title="Envato"
+                 data-title="Baki"
                  data-icon-path="/Uploads//icons/map-marker.png"
                  data-content="Melbourne VIC 3000, Australia<br><a href='mailto:baharshs@code.edu.az'>baharshs@code.edu.az</a>">
             </div>
@@ -61,40 +64,41 @@
         <!-- Form box -->
         <div class="form-box">
             <div class="contact-form">
-                <form action="#" method="post" id="email-form">
-                    <div class="row">
-                        <div class="form-group col-lg-12">
-                            <div class="response"></div>
-                        </div>
+                <form asp-action="Index" method="post" >
+                    <div class="form-group">
+                        <div class="response"></div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AboutPasient.Name">Ad</label>
+                        <input type="text" asp-for="AboutPasient.Name"  class="form-control" required="">
+                        <span asp-validation-for="AboutPasient.Name" class="text-danger"></span>
 
-                        <div class="col-lg-6 col-md-12">
-                            <div class="form-group">
-                                <input type="text" name="AdSoyad" class="AdSoyad" placeholder="Ad Soyad*">
-                            </div>
+                    </div>
 
-                            <div class="form-group">
-                                <input type="email" name="email" class="email" placeholder="Email Adress *">
-                            </div>
+                    <div class="form-group">
+                        <label asp-for="AboutPasient.Email">Email</label>
+                        <input type="text" asp-for="AboutPasient.Email" class="form-control" required="">
+                        <span asp-validation-for="AboutPasient.Email" class="text-danger"></span>
 
-                            <div class="form-group">
-                                <input type="text" name="telefon" class="telefon" placeholder="Telefon Nomresi">
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="col-lg-6 col-md-12">
-                            <div class="form-group">
-                                <textarea name="contact_message" class="mesaj" placeholder="Mesajiniz"></textarea>
-                            </div>
+                    <div class="form-group">
+                        <label asp-for="AboutPasient.Telephone">Telefon</label>
+                        <input type="text" asp-for="AboutPasient.Telephone"  class="form-control" required="">
+                        <span asp-validation-for="AboutPasient.Telephone" class="text-danger"></span>
+                    </div>
 
-                        </div>
+                    <div class="form-group">
+                        <label asp-for="AboutPasient.About">Pasient Haqqında</label>
+                        <textarea asp-for="AboutPasient.About" class="form-control" required=""></textarea>
+                        <span asp-validation-for="AboutPasient.About" class="text-danger"></span>
+                    </div>
 
-                        <div class="form-group col-lg-12 text-center pt-3">
-                            <button class="theme-btn btn-style-one" type="button" id="submit" name="submit-form"><span class="btn-title">Gonder</span></button>
-                        </div>
+                    <div class="form-group">
+                        <button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="btn-title">Məlumatı Göndər</span></button>
                     </div>
                 </form>
             </div>
-        </div>
     </div>
 </section>
 <!--End Contact Section -->

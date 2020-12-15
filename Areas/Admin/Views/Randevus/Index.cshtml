@@ -4,14 +4,11 @@
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-
 <div class="container">
     <div class="row">
         <div class="col-lg-9">
-            <div class="col-lg-6"><h1>Randevu</h1></div>
-            <div class="col-lg-3">
-                <a asp-action="Create"><i class="fas fa-plus-square "></i></a>
-            </div>
+            <div class="col-lg-6"><h1>Randevular</h1></div>
+            
         </div>
     </div>
 </div>
@@ -22,29 +19,29 @@
                 @Html.DisplayNameFor(model => model.PasientName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Time)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Date)
             </th>
-           
             <th>
-                @Html.DisplayNameFor(model => model.Departments)
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Departments.Name)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.PasientName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Time)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
@@ -52,16 +49,23 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
-           
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Departments.Name)
             </td>
+
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit"></i></a>
+                
                 <a asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-info-circle"></i></a>
                 <a asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-trash-alt"></i></a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>
+

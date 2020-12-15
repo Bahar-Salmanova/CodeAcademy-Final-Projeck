@@ -12,6 +12,7 @@ namespace CodeClinic.ViewModel
         public Settings Settings { get; set; }
         public List<SettingLast> SettingLasts { get; set; }
         public BreadCrumbViewModel BreadCrumb { get; set; }
+        public AboutPasient AboutPasient { get; set; }
 
     }
 }
